@@ -52,6 +52,11 @@ const options = {
     process.env.CZ_JIRA_OPTIONAL,
     config.jiraOptional,
     defaults.jiraOptional
+  ),
+  jiraPrefix: getEnvOrConfig(
+    process.env.CZ_JIRA_PREFIX,
+    config.jiraPrefix,
+    defaults.jiraPrefix
   )
 };
 
