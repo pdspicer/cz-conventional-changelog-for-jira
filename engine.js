@@ -125,12 +125,15 @@ module.exports = function(options) {
           default: options.defaultSubject,
           maxLength: maxHeaderWidth,
           leadingLabel: answers => {
-            const jira = answers.jira ? ` ${answers.jira}` : '';
+            let jira = answers.jira ? ` ${answers.jira}` : '';
             let scope = '';
 
             if (answers.scope && answers.scope !== 'none') {
               scope = `(${answers.scope})`;
-            }
+            } else if (answers.jira) {
+	      scope = `(${answers.jira})`;
+	      jira = '';
+   	    }
 
             return `${answers.type}${scope}:${jira}`;
           },
@@ -212,6 +215,13 @@ module.exports = function(options) {
         // parentheses are only needed when a scope is present
         var scope = answers.scope ? '(' + answers.scope + ')' : '';
         var jira = answers.jira ? answers.jira + ' ' : '';
+
+	if (answers.scope && answers.scope !== 'none') {
+          scope = `(${answers.scope})`;
+        } else if (answers.jira) {
+          scope = `(${answers.jira})`;
+          jira = '';
+        }
 
         // Hard limit this line in the validate
         const head = answers.type + scope + ': ' + jira + answers.subject;
