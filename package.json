@@ -1,5 +1,5 @@
 {
-  "name": "@digitalroute/cz-conventional-changelog-for-jira",
+  "name": "cz-jira-scope-changelog",
   "version": "0.0.0-semantically-released",
   "description": "Commitizen adapter following the conventional-changelog format and also asking for JIRA issue.",
   "main": "index.js",
@@ -9,16 +9,19 @@
     "format": "prettier --write *.js",
     "semantic-release": "semantic-release"
   },
-  "homepage": "https://github.com/digitalroute/cz-conventional-changelog-for-jira",
+  "homepage": "https://github.com/pdspicer/cz-conventional-changelog-for-jira",
   "repository": {
     "type": "git",
-    "url": "https://github.com/digitalroute/cz-conventional-changelog-for-jira.git"
+    "url": "https://github.com/pdspicer/cz-conventional-changelog-for-jira.git"
   },
   "engineStrict": true,
   "engines": {
     "node": ">= 10"
   },
   "author": "Marcus Johansson <polarn@gmail.com>",
+  "contributors": [
+    "Paul Spicer <pdspicer@gmail.com>"
+  ],
   "license": "MIT",
   "dependencies": {
     "boxen": "^5.0.0",
