@@ -9,7 +9,7 @@ var config = configLoader.load();
 
 function getEnvOrConfig(env, configVar, defaultValue) {
   const isEnvSet = Boolean(env);
-  const isConfigSet = typeof configVar === 'boolean';
+  const isConfigSet = typeof configVar !== 'undefined';
 
   if (isEnvSet) return env === 'true';
   if (isConfigSet) return configVar;
