@@ -1,10 +1,9 @@
-# cz-conventional-changelog-for-jira
+# cz-jira-scope-changelog
 
 Part of the [commitizen](https://github.com/commitizen/cz-cli) family. Prompts for [conventional changelog](https://github.com/conventional-changelog/conventional-changelog) standard and also prompts for a mandatory JIRA issue.
 
-[![npm version](https://img.shields.io/npm/v/@digitalroute/cz-conventional-changelog-for-jira.svg?style=flat-square)](https://www.npmjs.org/package/@digitalroute/cz-conventional-changelog-for-jira)
-[![npm downloads](https://img.shields.io/npm/dm/@digitalroute/cz-conventional-changelog-for-jira.svg?style=flat-square)](http://npm-stat.com/charts.html?package=@digitalroute/cz-conventional-changelog-for-jira&from=2015-08-01)
-[![Build Status](https://img.shields.io/travis/digitalroute/cz-conventional-changelog-for-jira.svg?style=flat-square)](https://travis-ci.org/digitalroute/cz-conventional-changelog-for-jira)
+[![npm version](https://img.shields.io/npm/v/cz-jira-scope-changelog.svg?style=flat-square)](https://www.npmjs.org/package/@digitalroute/cz-conventional-changelog-for-jira)
+[![npm downloads](https://img.shields.io/npm/dm/cz-jira-scope-changelog.svg?style=flat-square)](http://npm-stat.com/charts.html?package=cz-jira-scope-changelog&from=2015-08-01)
 
 ## Features
 
@@ -17,7 +16,7 @@ Part of the [commitizen](https://github.com/commitizen/cz-cli) family. Prompts f
 ### Installation
 
 ```bash
-npm install commitizen @digitalroute/cz-conventional-changelog-for-jira
+npm install commitizen cz-jira-scope-changelog
 ```
 
 and then add the following to package.json:
@@ -29,7 +28,7 @@ and then add the following to package.json:
   },
   "config": {
     "commitizen": {
-      "path": "./node_modules/@digitalroute/cz-conventional-changelog-for-jira"
+      "path": "./node_modules/cz-jira-scope-changelog"
     }
   }
 }
@@ -37,11 +36,11 @@ and then add the following to package.json:
 
 ### Usage
 
-![Gif of terminal when using cz-conventional-changelog-for-jira](https://raw.githubusercontent.com/digitalroute/cz-conventional-changelog-for-jira/master/images/demo.gif)
+![Gif of terminal when using cz-jira-scope-changelog](https://raw.githubusercontent.com/digitalroute/cz-conventional-changelog-for-jira/master/images/demo.gif)
 
 ## Configuration
 
-Like commitizen, you can specify the configuration of cz-conventional-changelog-for-jira through the package.json's `config.commitizen` key, or with environment variables.
+Like commitizen, you can specify the configuration of cz-jira-scope-changelog through the package.json's `config.commitizen` key, or with environment variables.
 
 | Environment variable | package.json   | Default   | Description                                                                                                                                                           |
 | -------------------- | -------------- | --------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -63,9 +62,9 @@ Alternatively, if you want to create your own profile, you can use the _configur
 Here is an example:
 **./index.js**
 ```javascript
-const custom = require('@digitalroute/cz-conventional-changelog-for-jira/configurable');
+const custom = require('cz-jira-scope-changelog/configurable');
 // You can do this optionally if you want to extend the commit types
-const defaultTypes = require('@digitalroute/cz-conventional-changelog-for-jira/types');
+const defaultTypes = require('cz-jira-scope-changelog/types');
 
 module.exports = custom({
   types: {
