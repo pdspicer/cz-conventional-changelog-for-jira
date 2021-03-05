@@ -37,5 +37,14 @@ module.exports = {
   revert: {
     description: 'Reverts a previous commit',
     title: 'Reverts'
+  },
+  style: {
+    description:
+      'Changes that do not affect the meaning of the code (white-space, formatting, missing semi-colons, etc)',
+    title: 'Style'
+  },
+  perf: {
+    description: 'A code change that improves performance',
+    title: 'Performance'
   }
 };
